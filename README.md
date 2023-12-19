@@ -11,4 +11,4 @@ Splash/Launcher Screen
 Main Dice Roller Screen
 
 
-Thanks for visiting/reviewing! :) 
+Thanks for visiting & reviewing! :) 
