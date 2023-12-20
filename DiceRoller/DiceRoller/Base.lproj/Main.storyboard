@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <device id="retina6_72" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -12,41 +12,57 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="DiceRoller" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fWX-Il-8Oe">
-                                <rect key="frame" x="138" y="610" width="117" height="64"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="tinted" title="Roll">
-                                    <backgroundConfiguration key="background">
-                                        <color key="backgroundColor" red="1" green="0.59607843140000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <color key="strokeColor" red="0.50980392159999999" green="0.01176470588" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    </backgroundConfiguration>
-                                    <fontDescription key="titleFontDescription" type="system" weight="semibold" pointSize="28"/>
-                                    <color key="baseForegroundColor" red="0.50980392159999999" green="0.01176470588" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    <color key="baseBackgroundColor" red="1" green="0.59607843137254901" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </buttonConfiguration>
-                                <connections>
-                                    <action selector="mRollBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="F3z-vJ-5Xc"/>
-                                </connections>
-                            </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="DiceOne" translatesAutoresizingMaskIntoConstraints="NO" id="TfK-ed-jGC">
-                                <rect key="frame" x="76" y="306" width="240" height="240"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Roll The Dice" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BTQ-W5-VdJ">
-                                <rect key="frame" x="88" y="208" width="217" height="43"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="36"/>
-                                <color key="textColor" red="0.50980392156862742" green="0.011764705882352941" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="62" translatesAutoresizingMaskIntoConstraints="NO" id="2Dm-dG-YuE">
+                                <rect key="frame" x="108" y="271" width="216.33333333333337" height="390"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Roll The Dice" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BTQ-W5-VdJ">
+                                        <rect key="frame" x="0.0" y="0.0" width="216.33333333333334" height="47.666666666666664"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="216.33000000000001" id="gII-Bt-d4f"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="36"/>
+                                        <color key="textColor" red="0.50980392156862742" green="0.011764705882352941" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="diceOne" translatesAutoresizingMaskIntoConstraints="NO" id="TfK-ed-jGC">
+                                        <rect key="frame" x="22.666666666666657" y="109.66666666666667" width="170.66666666666666" height="170.66666666666663"/>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fWX-Il-8Oe">
+                                        <rect key="frame" x="72.333333333333343" y="342.33333333333337" width="71.666666666666657" height="47.666666666666686"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="tinted" title="Roll">
+                                            <backgroundConfiguration key="background">
+                                                <color key="backgroundColor" red="1" green="0.59607843140000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="strokeColor" red="0.50980392159999999" green="0.01176470588" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </backgroundConfiguration>
+                                            <fontDescription key="titleFontDescription" type="system" weight="semibold" pointSize="28"/>
+                                            <color key="baseForegroundColor" red="0.50980392159999999" green="0.01176470588" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="baseBackgroundColor" red="1" green="0.59607843137254901" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="mRollBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="F3z-vJ-5Xc"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="BTQ-W5-VdJ" firstAttribute="leading" secondItem="2Dm-dG-YuE" secondAttribute="leading" id="UwD-7c-ASW"/>
+                                    <constraint firstAttribute="trailing" secondItem="BTQ-W5-VdJ" secondAttribute="trailing" id="bDh-wK-jIF"/>
+                                    <constraint firstItem="BTQ-W5-VdJ" firstAttribute="top" secondItem="2Dm-dG-YuE" secondAttribute="top" id="gfI-QA-k8j"/>
+                                    <constraint firstItem="TfK-ed-jGC" firstAttribute="centerY" secondItem="2Dm-dG-YuE" secondAttribute="centerY" id="s4p-Jz-3Ev"/>
+                                    <constraint firstItem="TfK-ed-jGC" firstAttribute="centerX" secondItem="2Dm-dG-YuE" secondAttribute="centerX" id="zGd-P1-2aY"/>
+                                </constraints>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" red="0.37254901959999998" green="0.52549019610000003" blue="0.43921568630000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <color key="tintColor" cyan="0.7255792942" magenta="0.5" yellow="0.0" black="0.0" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="2Dm-dG-YuE" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="5LB-Zk-gbQ"/>
+                            <constraint firstItem="2Dm-dG-YuE" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="BoZ-uR-c34"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="mRollImg" destination="TfK-ed-jGC" id="Oyo-Dw-WyK"/>
@@ -58,6 +74,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="DiceOne" width="100" height="100"/>
+        <image name="diceOne" width="170.66667175292969" height="170.66667175292969"/>
     </resources>
 </document>
