@@ -8,7 +8,7 @@
 import UIKit
 
 class ViewController: UIViewController {
-    private let images = ["DiceOne", "DiceTwo", "DiceThree", "DiceFour", "DiceFive", "DiceSix"]
+    private let images = ["diceOne", "diceTwo", "diceThree", "diceFour", "diceFive", "diceSix"]
     
     @IBOutlet weak var mRollImg: UIImageView!
     
